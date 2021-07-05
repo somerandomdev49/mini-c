@@ -60,7 +60,7 @@ int main(int argc, char *argv[]) {
     arg_type_t arg_types[] = {
         (arg_type_t){ "help", 'h', opt_id_help, "- show this help message." },
         (arg_type_t){ "cat", 'c', opt_id_cat, "<file> - output file's contents to stdout." },
-        (arg_type_t){ "askname", 'a', opt_id_askname, "- ask for a name." },
+        (arg_type_t){ "ask-name", 'a', opt_id_askname, "- ask for a name." },
         (arg_type_t){ "read", 'r', opt_id_read, "<file> - read a file in a special format." },
     };
 

@@ -96,6 +96,14 @@ void duplicate_long_option(char *name) {
     fprintf(stderr, "Duplicate long option: '%s'!\n", name);
 }
 
+void unknown_long_option(char *name) {
+    fprintf(stderr, "Unknown long option: '%s'!\n", name);
+}
+
+void unknown_short_option(char name) {
+    fprintf(stderr, "Unknown short option: '%c'!\n", name);
+}
+
 bool check_short_arg(arg_t *arg, char name) {
     if(arg->type != ARG_SHORT) return false;
     char *loc = strchr(arg->value, name);
@@ -126,8 +134,8 @@ bool parse_short_arg(arg_t *arg, used_options_t *opts, char value, int id) {
             duplicate_short_option(value);
         } else {
             add_used_option(opts, id, arg->data);
-            return true;
         }
+        return true;
     }
     return false;
 }

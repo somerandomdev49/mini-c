@@ -102,7 +102,7 @@ void read_map(const char *filename, values_t *values) {
                 return;
             }
 
-            copystr(line, last->values[last->length], read);
+            copystr(line, last->values[last->length], read + 1);
             ++last->length;
         }
     }
