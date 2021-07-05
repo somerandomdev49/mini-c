@@ -23,6 +23,7 @@ void option_cat(const char *filename) {
         fprintf(stderr, "Could not open file '%s'!\n", filename);
         return;
     }
+
     char c;
     while((c = fgetc(f)) != EOF) {
         putc(c, stdout);
